@@ -11,7 +11,7 @@ const DeleteProduct = (id) => {
       "x-auth-token": userAuth.user.token,
     },
   };
-  var uri = "/api/items/" + id;
+  var uri = "https://cafe-coffee-webisteswsw.onrender.com/api/items/" + id;
   //Hard Delete
   console.log(uri);
   axios.delete(uri, config).then(

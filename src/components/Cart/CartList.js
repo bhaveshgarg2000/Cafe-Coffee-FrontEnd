@@ -74,7 +74,7 @@ class CartList extends React.PureComponent {
       orderTotalAmount,
     };
 
-    axios.post("/api/orders/", body, config).then(
+    axios.post("https://cafe-coffee-webisteswsw.onrender.com/api/orders/", body, config).then(
       (res) => {
         console.log(res.data, res.status);
         this.setState({orderPlaced:true});

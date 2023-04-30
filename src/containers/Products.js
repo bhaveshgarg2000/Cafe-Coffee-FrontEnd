@@ -33,11 +33,10 @@ class Products extends PureComponent {
       this.fetchPosts("api/items");
     } else {
       if (this.state.category === "All") {
-        const uri = "api/items/name/" + search;
+        const uri = "https://cafe-coffee-webisteswsw.onrender.com/api/items/name/" + search;
         this.fetchPosts(uri);
       } else {
-        const uri =
-          "api/items/category/" + this.state.category + "/name/" + search;
+        const uri ="https://cafe-coffee-webisteswsw.onrender.com/api/items/category/" + this.state.category + "/name/" + search;
         // console.log("search cat,name", uri);
         this.fetchPosts(uri);
       }
@@ -48,7 +47,7 @@ class Products extends PureComponent {
     var category = event.target.value;
     this.setState({ category: category });
     // console.log("category changes", category);
-    const uri = "api/items/category/" + category;
+    const uri = "https://cafe-coffee-webisteswsw.onrender.com/api/items/category/" + category;
 
     if (category === "All") this.fetchPosts("api/items");
     else this.fetchPosts(uri);
@@ -71,7 +70,7 @@ class Products extends PureComponent {
   };
 
   componentDidMount() {
-    this.fetchPosts("api/items");
+    this.fetchPosts("https://cafe-coffee-webisteswsw.onrender.com/api/items");
   }
 
   render() {

@@ -24,7 +24,7 @@ class UpdateProduct extends React.PureComponent {
     // console.log("id is ", id);
 
     const fetchPosts = async () => {
-      const res = await axios.get("/api/items/" + id);
+      const res = await axios.get("https://cafe-coffee-webisteswsw.onrender.com/api/items/" + id);
       //   console.log(res.data);
       if (res.status === 200) {
         var item = res.data;
@@ -128,7 +128,7 @@ class UpdateProduct extends React.PureComponent {
           "x-auth-token": userAuth.user.token,
         },
       };
-      var uri = "/api/items/" + id;
+      var uri = "https://cafe-coffee-webisteswsw.onrender.com/api/items/" + id;
       console.log(uri);
       axios.put(uri, body, config).then(
         (res) => {

@@ -32,7 +32,7 @@ class ShowOrders extends PureComponent {
     var userAuth = JSON.parse(localStorage.getItem("userAuthDetails"));
     var token = userAuth.user.token;
     var userId = userAuth.user.user.id;
-    this.fetchPosts("api/orders/"+userId,token);
+    this.fetchPosts("https://cafe-coffee-webisteswsw.onrender.com/api/orders/"+userId,token);
   }
 
   render() {

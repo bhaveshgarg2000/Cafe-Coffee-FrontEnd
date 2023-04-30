@@ -87,7 +87,7 @@ class AddProduct extends React.PureComponent {
           "x-auth-token": userAuth.user.token,
         },
       };
-      axios.post("/api/items/", body, config).then(
+      axios.post("https://cafe-coffee-webisteswsw.onrender.com/api/items/", body, config).then(
         (res) => {
           console.log(res.data, res.status);
           history.push("../Shop");

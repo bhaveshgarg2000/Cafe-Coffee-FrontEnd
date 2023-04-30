@@ -21,7 +21,7 @@ export default class Authorise extends React.PureComponent {
         "Content-Type": "application/json",
       },
     };
-    axios.post("/api/auth/", userData, config).then(
+    axios.post("https://cafe-coffee-webisteswsw.onrender.com/api/auth/", userData, config).then(
       (res) => {
         console.log(res.data, res.status);
         var data = { user: res.data, isAuthorised: true };
@@ -42,7 +42,7 @@ export default class Authorise extends React.PureComponent {
         "Content-Type": "application/json",
       },
     };
-    axios.post("/api/users/", userData, config).then(
+    axios.post("https://cafe-coffee-webisteswsw.onrender.com/api/users/", userData, config).then(
       (res) => {
         console.log(res.data, res.status);
         var data = { user: res.data, isAuthorised: true };
